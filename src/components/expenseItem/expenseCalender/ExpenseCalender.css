@@ -1,0 +1,23 @@
+.calender-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 5.5rem;
+    height: 5.5rem;
+    border: 1px solid #ececec;
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 12px;
+}
+.calender-month {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.calender-day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.calender-year {
+    font-size: 1rem;
+}
