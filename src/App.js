@@ -1,5 +1,6 @@
 import './App.css';
 import ExpenseItem from "./components/expenseItem/ExpenseItem";
+import Card from "./components/card/Card";
 
 function App() {
     const expenseItems = [
@@ -13,10 +14,12 @@ function App() {
             <div className="d-flex justify-content-center">
                 <h1>Expense Tracker</h1>
             </div>
-            <ExpenseItem expenseItem={expenseItems[0]}/>
-            <ExpenseItem expenseItem={expenseItems[1]}/>
-            <ExpenseItem expenseItem={expenseItems[2]}/>
-            <ExpenseItem expenseItem={expenseItems[3]}/>
+            <Card className="p-2 expenses-container">
+                <ExpenseItem expenseItem={expenseItems[0]}/>
+                <ExpenseItem expenseItem={expenseItems[1]}/>
+                <ExpenseItem expenseItem={expenseItems[2]}/>
+                <ExpenseItem expenseItem={expenseItems[3]}/>
+            </Card>
         </div>
     );
 }
