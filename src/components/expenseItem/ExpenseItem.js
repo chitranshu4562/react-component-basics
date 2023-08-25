@@ -6,7 +6,6 @@ function ExpenseItem(props) {
     const [title, setTitle] = useState(props.expenseItem.title);
     const clickHandler = () => {
         setTitle('updated!!'); // setTitle schedule for value change of state variable
-        console.log(title);
     }
     return (
         <div className="row item-container">
