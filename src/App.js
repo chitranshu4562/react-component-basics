@@ -1,6 +1,7 @@
 import './App.css';
-import ExpenseItem from "./components/expenseItem/ExpenseItem";
-import NewExpense from "./components/newExpense/NewExpense";
+import ExpenseItem from "./components/expenseItems/expenseItem/ExpenseItem";
+import NewExpense from "./components/expenseItems/newExpense/NewExpense";
+import ExpenseItems from "./components/expenseItems/ExpenseItems";
 
 function App() {
     const expenseItems = [
@@ -9,21 +10,12 @@ function App() {
         {id: 2, title: 'Home Loan', date: new Date(2019, 8, 15), amount: 500},
         {id: 3, title: 'Grocery expense', date: new Date(2022, 12, 31), amount: 150}
     ]
-    const addExpenseHandler = (addedExpenseData) => {
-        console.log(addedExpenseData);
-    }
     return (
         <div className="container-fluid w-75 m-auto">
             <div className="d-flex justify-content-center">
                 <h1 className="text-light">Expense Tracker</h1>
             </div>
-            <NewExpense onAddExpense={addExpenseHandler}/>
-            <div className="expenses-container">
-                <ExpenseItem expenseItem={expenseItems[0]}/>
-                <ExpenseItem expenseItem={expenseItems[1]}/>
-                <ExpenseItem expenseItem={expenseItems[2]}/>
-                <ExpenseItem expenseItem={expenseItems[3]}/>
-            </div>
+            <ExpenseItems expenseItems={expenseItems}/>
         </div>
     );
 }

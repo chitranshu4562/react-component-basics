@@ -1,5 +1,5 @@
 import './ExpenseCalender.css'
-import Card from "../../card/Card";
+import Card from "../../../card/Card";
 
 function ExpenseCalender(props) {
     const day = props.date.toLocaleString('en-US', {day: '2-digit'});
