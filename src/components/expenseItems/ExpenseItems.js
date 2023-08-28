@@ -2,6 +2,7 @@ import ExpenseItem from "./expenseItem/ExpenseItem";
 import ExpenseFilter from "./expenseFilter/ExpenseFilter";
 import './ExpenseItems.css'
 import {useState} from "react";
+import Chart from "../chart/Chart";
 
 function ExpenseItems(props) {
     const [filteredYear, setFilteredYear] = useState('2020');
@@ -19,6 +20,9 @@ function ExpenseItems(props) {
 
     return <div className="expenses-container">
         <ExpenseFilter selectedYear={filteredYear} onSelectingYear={filterYearHandler}/>
+        <div className="d-flex justify-content-center">
+            {filterItems.length > 0 && <Chart expenses={filterItems}/>}
+        </div>
         {/*{filterItems.length === 0 ? (<div className="d-flex justify-content-center">*/}
         {/*    <h2 className="text-light">No Items found</h2>*/}
         {/*</div>) : filterItems.map(expense => <ExpenseItem key={expense.id} title={expense.title} date={expense.date}*/}
