@@ -79,28 +79,28 @@ function ExpenseForm(props) {
         // console.log({title: userInput.enteredTitle, amount: userInput.enteredAmount, date: userInput.enteredDate.toLocaleString()})
     }
     return <form onSubmit={submitHandler}>
-        <div className="form-group row gy-3">
-            <div className="col-6">
-                <label className="label-class mb-1">Title</label>
+        <div className="form-group row gy-2">
+            <div className="col-sm-12 col-lg-6">
+                <label className="label-class">Title</label>
                 <input type="text" name="TITLE" value={enteredTitle} className="form-control" onChange={(event) => {
                     inputChangeHandler(event.target.name, event.target.value)
                 }}/>
             </div>
-            <div className="col-6">
-                <label className="label-class mb-1">Amount</label>
+            <div className="col-sm-12 col-lg-6">
+                <label className="label-class">Amount</label>
                 <input type="number" name="AMOUNT" value={enteredAmount} min="0.01" step="0.01" className="form-control" onChange={(event) => {
                     inputChangeHandler(event.target.name, event.target.value)
                 }}/>
             </div>
-            <div className="col-6">
-                <label className="label-class mb-1">Date</label>
+            <div className="col-sm-12 col-lg-6">
+                <label className="label-class">Date</label>
                 <input type="date" name="DATE" value={enteredDate} min="2020-01-01" max="2024-12-31" className="form-control"
                        onChange={(event) => {
                            inputChangeHandler(event.target.name, event.target.value)
                        }}/>
             </div>
-            <div className="col-6 d-flex justify-content-end align-items-end">
-                <button type="submit" className="button-class">Add Expense</button>
+            <div className="d-flex align-items-end col-sm-12 col-lg-6">
+                <button type="submit" className="btn-class">Add Expense</button>
             </div>
         </div>
     </form>

@@ -1,10 +1,13 @@
-.button-class {
-    color: white;
-    background-color: #40005d;
-    padding: 0.5rem 5rem;
-    border-radius: 12px;
-}
 .label-class {
     font-weight: bold;
     color: #ececec;
+}
+.btn-class {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding: 6px 0;
+    background-color: #40005d;
+    color: white;
+    font-size: 1.2em;
 }
