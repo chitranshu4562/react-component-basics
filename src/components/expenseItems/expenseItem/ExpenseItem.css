@@ -20,3 +20,35 @@
     background-color: #40005d;
     border: 1px solid white;
 }
+.expense-item-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    background-color: rgba(169, 169, 169, 0.42);
+    border-radius: 10px;
+}
+.title-item {
+    grid-area: 1/span 2;
+}
+.title-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ececec;
+}
+.amount {
+    background-color: #40005d;
+    height: 100%;
+    border: 1px solid #ececec;
+    color: white;
+    border-radius: 12px;
+    display: grid;
+}
+.amount > div {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
