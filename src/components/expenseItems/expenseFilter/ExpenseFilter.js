@@ -8,12 +8,14 @@ function ExpenseFilter(props) {
             <label>Select a year</label>
         </div>
         <div className="col-9 d-flex justify-content-end">
-            <select value={props.selectedYear} onChange={selectHandler}>
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-            </select>
+            <div className="d-flex justify-content-center align-items-center">
+                <select value={props.selectedYear} onChange={selectHandler} className="dropdown-style">
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
         </div>
     </div>
 }
