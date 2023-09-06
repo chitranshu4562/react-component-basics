@@ -4,10 +4,10 @@ function ExpenseFilter(props) {
         props.onSelectingYear(event.target.value);
     }
     return <div className="row p-2">
-        <div className="col-3 year">
+        <div className="col-6 year">
             <label>Select a year</label>
         </div>
-        <div className="col-9 d-flex justify-content-end">
+        <div className="col-6 d-flex justify-content-end">
             <div className="d-flex justify-content-center align-items-center">
                 <select value={props.selectedYear} onChange={selectHandler} className="dropdown-style">
                     <option value="2020">2020</option>

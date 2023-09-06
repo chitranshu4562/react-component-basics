@@ -23,7 +23,7 @@ function Chart(props) {
     const chartDataMaxValues = chartDataList.map(data => data.value);
     const maxValue = Math.max(...chartDataMaxValues);
 
-    return <div className="chart-container w-100 px-4 py-3 row">
+    return <div className="chart-container w-100 row gx-4 gy-2 py-2 justify-content-center align-items-center">
         {chartDataList.map(chartData =>
             <ChartBar key={chartData.label} maxValue={maxValue} data={chartData.value} label={chartData.label}/>
         )}
