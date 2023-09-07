@@ -88,19 +88,27 @@ function ExpenseForm(props) {
             </div>
             <div className="col-sm-12 col-lg-6">
                 <label className="label-class">Amount</label>
-                <input type="number" name="AMOUNT" value={enteredAmount} min="0.01" step="0.01" className="form-control" onChange={(event) => {
-                    inputChangeHandler(event.target.name, event.target.value)
-                }}/>
+                <input type="number" name="AMOUNT" value={enteredAmount} min="0.01" step="0.01" className="form-control"
+                       onChange={(event) => {
+                           inputChangeHandler(event.target.name, event.target.value)
+                       }}/>
             </div>
             <div className="col-sm-12 col-lg-6">
                 <label className="label-class">Date</label>
-                <input type="date" name="DATE" value={enteredDate} min="2020-01-01" max="2024-12-31" className="form-control"
+                <input type="date" name="DATE" value={enteredDate} min="2020-01-01" max="2024-12-31"
+                       className="form-control"
                        onChange={(event) => {
                            inputChangeHandler(event.target.name, event.target.value)
                        }}/>
             </div>
             <div className="d-flex align-items-end col-sm-12 col-lg-6">
-                <button type="submit" className="btn-class">Add Expense</button>
+                <button type="submit" className="btn-class"
+                        style={(enteredTitle.trim() !== '' && enteredAmount.trim() !== '' && enteredDate.trim() !== '') ? {opacity: 1} : {
+                            opacity: 0.6,
+                            cursor: "not-allowed"
+                        }}>
+                    Add Expense
+                </button>
             </div>
         </div>
     </form>
