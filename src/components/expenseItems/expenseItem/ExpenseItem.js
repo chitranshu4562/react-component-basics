@@ -7,7 +7,7 @@ function ExpenseItem(props) {
                 <ExpenseCalender date={props.date}/>
             </div>
             <div className={styles.titleItem}>
-                <div className="title-style w-100 h-100">{props.title}</div>
+                <div className={`${styles.titleStyle} w-100 h-100`}>{props.title}</div>
             </div>
             <div className={styles.amountItem}>
                 <div className={styles.amount}>
