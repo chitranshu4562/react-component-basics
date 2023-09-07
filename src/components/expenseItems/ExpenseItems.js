@@ -1,6 +1,6 @@
 import ExpenseItem from "./expenseItem/ExpenseItem";
 import ExpenseFilter from "./expenseFilter/ExpenseFilter";
-import './ExpenseItems.css'
+import styles from './ExpenseItems.module.css'
 import {useState} from "react";
 import Chart from "../chart/Chart";
 
@@ -18,7 +18,7 @@ function ExpenseItems(props) {
         expensesContent = filterItems.map(expense => <ExpenseItem key={expense.id} title={expense.title} date={expense.date} amount={expense.amount}/>);
     }
 
-    return <div className="expenses-container">
+    return <div className={styles.expensesContainer}>
         <ExpenseFilter selectedYear={filteredYear} onSelectingYear={filterYearHandler}/>
         <div className="d-flex justify-content-center">
             {filterItems.length > 0 && <Chart expenses={filterItems}/>}

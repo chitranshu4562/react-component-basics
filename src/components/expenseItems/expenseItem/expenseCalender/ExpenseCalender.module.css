@@ -1,4 +1,4 @@
-.calender-container {
+.calenderContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,14 +8,14 @@
     color: white;
     border-radius: 12px;
 }
-.calender-month {
+.calenderMonth {
     font-size: 1rem;
     font-weight: bold;
 }
-.calender-day {
+.calenderDay {
     font-size: 1.5rem;
     font-weight: bold;
 }
-.calender-year {
+.calenderYear {
     font-size: 1rem;
 }

@@ -1,16 +1,16 @@
-.bar-stick {
+.barStick {
     height: 90%;
     width: 0.5em;
     background-color: #d18cf0;
     border-radius: 10px;
 }
-.bar-stick-inner {
+.barStickInner {
     background-color: #40005d;
     height: 50%;
     width: 100%;
     border-radius: 10px;
 }
-.chart-bar-box {
+.chartBarBox {
     height: 100px;
     min-width: 50px;
 }
